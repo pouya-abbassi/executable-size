@@ -21,7 +21,8 @@ help:
 	@echo '   make go                Compile Go file,   without DWARF and striped          '
 	@echo '   make go-dwarf          Compile Go file,   with DWARF                         '
 	@echo '                                                                                '
-	@echo '   make lisp              Compile LISP file                                     '
+	@echo '   make lisp-sbcl         Compile LISP file using SBCL compiler                 '
+	@echo '   make lisp-ccl          Compile LISP file, using CCL compiler                 '
 	@echo '                                                                                '
 
 
@@ -85,8 +86,13 @@ go-dwarf:
 	stat --printf="%s Bytes\n" hello
 
 
-lisp:
+lisp-sbcl:
 	sbcl --load hello.lisp --eval "(sb-ext:save-lisp-and-die \"hello\" :toplevel #'main :executable t)"
+	stat --printf="%s Bytes\n" hello
+
+
+lisp-ccl:
+	ccl --load hello.lisp --eval "(save-application \"hello\" :toplevel-function #'main :prepend-kernel t)"
 	stat --printf="%s Bytes\n" hello
 
 
