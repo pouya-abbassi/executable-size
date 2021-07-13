@@ -1,6 +1,6 @@
 help:
 	@echo 'Makefile for compiling a few "Hello, World!" programs in differest languages.   '
-	@echo 'More info: https://pouyacode.net/execution-size-of-programming-languages.html   '
+	@echo 'More info: https://pouyacode.net/executable-size-of-different-compilers.html    '
 	@echo '                                                                                '
 	@echo 'Usage:                                                                          '
 	@echo '   make clean             Remove compiled program                               '
