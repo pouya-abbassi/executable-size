@@ -7,8 +7,8 @@ You can use `make` command to compile each source code, try `make help` to see t
 ## System configuration
 * OS: Debian Sid
 * Architecture: x86_64
-* gcc: 10.2.1
-* g++: 10.2.1
+* gcc/g++: 10.2.1
+* clang: 13.0.0
 * glibc: 2.31-12
 * rustc: 1.53.0
 * go: go1.15.9
@@ -20,8 +20,11 @@ You can use `make` command to compile each source code, try `make help` to see t
 | Language                       | Static (Bytes) | Dynamic (Bytes) |
 |--------------------------------|----------------|-----------------|
 | C                              | 782768         | 16608           |
+| Clang                          | 786936         | 16496           |
 | C++                            | 2199656        | 17248           |
 | C++ (with stdio)               | 782776         | 16616           |
+| Clang++                        | 2236584        | 17072           |
+| clang++ (with stdio)           | 786944         | 16504           |
 | Rust                           | 4775696        | 3259488         |
 | Rust (size optimization)       | 4774864        | 17272           |
 | Go                             | 2034781        |                 |
